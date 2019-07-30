@@ -1,0 +1,62 @@
+<view class='tab'>
+  <view class='{{nav_index == 0?"active":""}}' data-index="0" bindtap='nav_select'>购买订单</view>
+  <view class='{{nav_index == 1?"active":""}}' data-index="1" bindtap='nav_select'>销售订单</view>
+</view>
+
+
+<swiper class='main' current='{{nav_index}}' bindchange='nav_swiper'>
+
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:100%;'>
+      <block wx:for="{{buyOrderList}}">
+        <view class='block'>
+          <view class='header'>
+            <text class='orderId'>订单号：{{item.oid}}</text>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='content'>
+            <image src='{{domain_name+item.image}}'></image>
+            <view class='info'>
+              <view class='name'>{{item.ptitle}}</view>
+              <text class='price'>￥{{item.price}}</text>
+            </view>
+            <text class='status'>{{item.status=='0'?"待发货":""}}{{item.status=='1'?"已发货":""}}{{item.status=='2'?"已完成":""}}</text>
+          </view>
+          <view class='bottom'>
+            <text class='time'>时间：{{item.createtime}}</text>
+            <text wx:if="{{item.status=='2'}}" class='comment' data-oid='{{item.oid}}' data-ptitle='{{item.ptitle}}' bindtap='comment'>评价</text>
+            <text wx:if="{{item.status=='1'}}" class='comment' data-oid='{{item.oid}}' bindtap='confirm'>确认收货</text>
+          </view>
+        </view>
+      </block>
+      <view wx:if="{{buyOrderList.length == 0}}" style='text-align:center;margin:10rpx;'>空空如也</view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:100%;'>
+      <block wx:for="{{salesOrderList}}">
+      <view class='block'>
+        <view class='header'>
+          <text class='orderId'>订单号：{{item.oid}}</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='content'>
+          <image src='{{domain_name+item.image}}'></image>
+          <view class='info'>
+            <view class='name'>{{item.ptitle}}</view>
+            <text class='price'>￥{{item.price}}</text>
+          </view>
+          <text class='status'>{{item.status=='0'?"待发货":""}}{{item.status=='1'?"已发货":""}}{{item.status=='2'?"已完成":""}}</text>
+        </view>
+        <view class='bottom'>
+          <text class='time'>时间：{{item.createtime}}</text>
+          <text wx:if="{{item.status == '0'}}" class='comment' data-oid="{{item.oid}}" data-name='{{item.title}}' data-price='{{item.price}}' data-status='{{item.status}}' data-nickname="{{item.nickname}}" data-mobile='{{item.mobile}}' data-address='{{item.address}}' bindtap='action'>去发货</text>
+        </view>
+      </view>
+      </block>
+      <view wx:if="{{salesOrderList.length == 0}}" style='text-align:center;margin:10rpx;'>空空如也</view>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>

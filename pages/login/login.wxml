@@ -1,0 +1,17 @@
+<form bindsubmit='form_submit'>
+  <view class="main">
+    <view class='input'>
+      <image src='../../imgs/account.png' mode='widthFix'></image>
+      <input style='width:200rpx' name="account" type='number' placeholder='请输入手机号'></input>
+    </view>
+    <view class='input'>
+      <image src='../../imgs/password.png' mode='widthFix'></image>
+      <input style='width:200rpx' name="password" type='password' placeholder='请输入密码'></input>
+    </view>
+    <button form-type='submit'>立即登录</button>
+    <view class='register'>
+      <text>没有账号？</text>
+      <navigator url='../register/register'>去注册</navigator>
+    </view>
+  </view>
+</form>

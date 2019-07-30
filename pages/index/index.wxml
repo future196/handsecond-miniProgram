@@ -1,0 +1,64 @@
+<view>
+  <swiper class='header' indicator-dots="true" autoplay='true'>
+    <swiper-item>
+      <image src='/imgs/fish.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/imgs/fish.png'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='tab'>
+  <view class='{{nav_index == 0?"active":""}}' data-index="0" bindtap='nav_select'>二手交易</view>
+  <view class='{{nav_index == 1?"active":""}}' data-index="1" bindtap='nav_select'>物品租赁</view>
+</view>
+
+
+<swiper class='main' current='{{nav_index}}' bindchange='nav_swiper'>
+  <swiper-item>
+
+    <scroll-view scroll-y='true' style='height:100%;'>
+      <block wx:for="{{secondHandProduceList}}">
+        <navigator url='detail/detail?id={{item.id}}' class='block'>
+          <view class='seller'>卖家：{{item.nickname}}</view>
+          <view class='image'>
+            <image src='{{domain_name+item.image}}'></image>
+          </view>
+          <view class='content'>
+            <view class='name'>{{item.title}}</view>
+            <view class='price'>
+              <text class='current_price'>￥{{item.price}}</text>
+              <text class='initial_price'>￥{{item.old_price}}</text>
+            </view>
+          </view>
+        </navigator>
+      </block>
+      <view wx:if="{{secondHandProduceList.length == 0}}" style='text-align:center;margin:10rpx;'>空空如也</view>
+    </scroll-view>
+
+  </swiper-item>
+  <swiper-item>
+
+    <scroll-view scroll-y='true' style='height:100%;'>
+      <block wx:for="{{leaseProduceList}}">
+        <navigator url='detail/detail?id={{item.id}}' class='block'>
+          <view class='seller'>卖家：{{item.nickname}}</view>
+          <view class='image'>
+            <image src='{{domain_name+item.image}}'></image>
+          </view>
+          <view class='content'>
+            <view class='name'>{{item.title}}</view>
+            <view class='price'>
+              <text class='current_price'>￥{{item.price}}</text>
+              <text class='initial_price'>￥{{item.old_price}}</text>
+            </view>
+          </view>
+        </navigator>
+      </block>
+      <view wx:if="{{leaseProduceList.length == 0}}" style='text-align:center;margin:10rpx;'>空空如也</view>
+    </scroll-view>
+
+  </swiper-item>
+  
+</swiper>

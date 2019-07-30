@@ -1,0 +1,30 @@
+/* pages/index/order/order.wxss */
+page{
+  background: #f5f5f5;
+}
+
+.lists{
+  background: white;
+  margin-top:20rpx;
+}
+
+.lists view{
+  border-bottom: 1px solid #f5f5f5;
+  margin:0 50rpx;
+  padding:30rpx 0;
+}
+
+.price{
+  color:red;
+}
+
+button{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  height:100rpx;
+  font-size: 35rpx;
+  background: green;
+  color:white;
+  border-radius: 0;
+}

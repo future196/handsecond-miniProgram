@@ -1,0 +1,18 @@
+<form bindsubmit='update'>
+  <view class='lists'>
+    <view class='list'>
+      <text>收货人姓名：</text>
+      <input type='text' name='nickname' value='{{userInfo.nickname}}' placeholder='收货人姓名'></input>
+    </view>
+    <view class='list'>
+      <text>收货人电话：</text>
+      <input type='number' name='mobile' value='{{userInfo.mobile}}' placeholder='收货人电话'></input>
+    </view>
+    <view class='list'>
+      <text>收货人地址：</text>
+      <textarea name='address' value='{{userInfo.address == null ? "":userInfo.address}}' placeholder='收货人地址'></textarea>
+    </view>
+  </view>
+
+  <button form-type='submit'>保存</button>
+</form>

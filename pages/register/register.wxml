@@ -1,0 +1,25 @@
+<form bindsubmit='form_submit'>
+  <view class="main">
+    <view class='input'>
+      <image src='../../imgs/account.png' mode='widthFix'></image>
+      <input style='width:200rpx' type='number' name="account" placeholder='请输入手机号'></input>
+    </view>
+    <view class='input'>
+      <image src='../../imgs/name.png' mode='widthFix'></image>
+      <input style='width:200rpx' type='text' name="username" placeholder='请输入用户名'></input>
+    </view>
+    <view class='input'>
+      <image src='../../imgs/password.png' mode='widthFix'></image>
+      <input style='width:200rpx' type='password' name="password" placeholder='请输入密码'></input>
+    </view>
+    <view class='input'>
+      <image src='../../imgs/password.png' mode='widthFix'></image>
+      <input style='width:200rpx' type='password' name="repassword" placeholder='请确认密码'></input>
+    </view>
+    <button form-type='submit'>立即注册</button>
+    <view class='login'>
+      <text>已有账号？</text>
+      <navigator bindtap='login'>去登录</navigator>
+    </view>
+  </view>
+</form>

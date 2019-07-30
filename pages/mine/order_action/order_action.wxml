@@ -1,0 +1,23 @@
+<view class='lists'>
+  <view class='name'>收货人姓名：{{info.nickname}}</view>
+  <view class='telephone'>收货人电话：{{info.mobile}}</view>
+  <view class='address' style='border:0'>收货地址：{{info.address}}</view>
+</view>
+
+
+<view class='lists'>
+  <view class='name'>商品名称： {{info.name}}</view>
+  <view>价格：
+    <text class='price'>￥{{info.price}}</text>
+  </view>
+</view>
+
+<view class='lists' style='display:flex;'>
+  <view class='name' style='flex:1;'>订单状态：</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">{{array[index]}}</view>
+  </picker>
+  <image style='width:40rpx;height:40rpx;margin:30rpx;' src='/imgs/right.png'></image>
+</view>
+
+<button bindtap='save'>保存</button>

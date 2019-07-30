@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/mine/order_action/order_action",
+    "pages/index/detail/detail",
+    "pages/mine/comment/comment",
+    "pages/mine/order/order",
+    "pages/mine/add_gbook/add_gbook",
+    "pages/mine/gbook/gbook",
+    "pages/mine/release/release",
+    "pages/mine/mine",
+    "pages/index/address/address",
+    "pages/index/order/order",
+    "pages/release/release"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "二手交易平台",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "grey",
+    "selectedColor": "#00CD00",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/home.png",
+        "selectedIconPath": "imgs/home2.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布",
+        "iconPath": "imgs/release.png",
+        "selectedIconPath": "imgs/release2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imgs/mine.png",
+        "selectedIconPath": "imgs/mine2.png"
+      }
+    ]
+  }
+}

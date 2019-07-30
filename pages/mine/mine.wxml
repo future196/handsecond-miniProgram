@@ -1,0 +1,22 @@
+<view class='header'>
+  <image src='/imgs/icon.png'></image>
+  <view>{{userInfo.nickname}}</view>
+</view>
+
+<view class='lists'>
+  <navigator url='release/release' class='list'>
+    <image src='/imgs/release.png'></image>
+    <text>我的发布</text>
+    <image src='/imgs/right.png'></image>
+  </navigator>
+  <navigator url='order/order' class='list'>
+    <image src='/imgs/order.png'></image>
+    <text>我的订单</text>
+    <image src='/imgs/right.png'></image>
+  </navigator>
+  <navigator url='gbook/gbook' class='list' style='border:0;'>
+    <image src='/imgs/gbook.png'></image>
+    <text>我的留言</text>
+    <image src='/imgs/right.png'></image>
+  </navigator>
+</view>

@@ -1,0 +1,34 @@
+<view class='header'>
+  <image src='{{domain_name+detail.image}}'></image>
+</view>
+
+<view class='name'>
+  {{detail.title}}
+</view>
+
+<view class='price'>
+  <text class='current_price'>￥{{detail.price}}</text>
+  <text class='initial_price'>￥{{detail.old_price}}</text>
+</view>
+
+<view class='intro'>
+  <view>卖家：{{detail.nickname}}</view>
+  <view>简介：</view>
+  {{detail.content}}
+</view>
+
+<view style='text-align:center;margin-top:30rpx;'>网友评论</view>
+
+<view class='comment'>
+  <block wx:for="{{commentList}}">
+    <view class='block'>
+      <view class='username'>{{item.nickname}}</view>
+      <view class='content'>{{item.content}}</view>
+      <view class='time'>{{item.createtime}}</view>
+    </view>
+  </block>
+  <view wx:if="{{commentList.length == 0}}" style='margin:100rpx;text-align:center;'>空空如也</view>
+</view>
+
+<button wx:if='{{detail.users_id != userInfo.id}}' class='action' bindtap='action'>{{detail.category_id == 1?"购买":"租赁"}}</button>
+<button wx:if='{{detail.users_id == userInfo.id}}' data-status='{{detail.status}}' class='action' bindtap='change'>{{detail.status == 'normal'?"下架":"上架"}}</button>

@@ -1,0 +1,82 @@
+/* pages/index/index.wxss */
+
+page{
+  background: #F5F5F5;
+}
+
+.header swiper-item image{
+  width:100%;
+  height:100%;
+}
+
+.tab{
+  display: flex;
+  height:8vh;
+  background: white;
+}
+
+.tab view{
+  flex:1;
+  text-align: center;
+  padding:20rpx;
+  font-size: 35rpx;
+}
+
+.active{
+  color:#00CD00;
+  border-bottom: 5rpx solid #00CD00;
+}
+
+.main{
+  height:92vh;
+}
+
+.block{
+  width:40%;
+  background:white;
+  text-align: center;
+  float:left;
+  margin:30rpx 0 20rpx 50rpx;
+}
+
+.block .image{
+  width:100%;
+  height:35vw;
+}
+
+.block .image image{
+  width:100%;
+  height:100%;
+}
+
+.block .seller{
+  padding:10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.block .content{
+  padding:10rpx;
+}
+.block .content .name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.block .content .price{
+  color:red;
+}
+
+.initial_price{
+  color:grey;
+  text-decoration:line-through;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

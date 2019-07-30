@@ -1,0 +1,30 @@
+<form bindsubmit='form_submit'>
+  <view class='input'>
+    <input type='text' name='title' value='{{input}}' placeholder='请输入标题'></input>
+  </view>
+  <view class='input'>
+    <textarea name='content' value='{{input}}' placeholder='请输入详情介绍'></textarea>
+  </view>
+  <view class='input'>
+    <image class='icon' src='{{image_url == ""?"/imgs/add_image.png":domain_name+image_url}}' bindtap='add_image'></image>
+  </view>
+  <view class='lists'>
+    <view class='list'>
+      <text>分类</text>
+      <picker bindchange="typeChange" value="{{index}}" range="{{array}}">
+        <view class="picker">当前选择：{{array[index]}}</view>
+      </picker>
+    </view>
+    <view class='list'>
+      <text>价格</text>
+      <input name='price' style='width:200rpx;' value='{{input}}' placeholder='请输入价格'></input>
+    </view>
+    <view class='list' style='border:0;'>
+      <text>原价</text>
+      <input name='old_price' style='width:200rpx;' value='{{input}}' placeholder='请输入原价'></input>
+    </view>
+
+  </view>
+
+  <button form-type='submit'>发布</button>
+</form>

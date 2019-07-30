@@ -1,0 +1,18 @@
+<view class='lists' wx:if="{{userInfo.address}}">
+  <view class='name'>收货人姓名：{{userInfo.nickname}}<text style='float:right;' bindtap='edit'>编辑</text></view>
+  <view class='telephone'>收货人电话：{{userInfo.mobile}}</view>
+  <view class='address' style='border:0'>收货地址：{{userInfo.address}}</view>
+</view>
+
+<view class='lists' wx:if="{{!userInfo.address}}">
+  <view style='border:0;' style='display:flex;'>
+    <text class='tips' style='flex:1;color:grey;'>还没有填写地址信息</text><text bindtap='edit'>立即填写</text>
+  </view>
+</view>
+
+<view class='lists'>
+  <view class='name'>商品名称： 驱蚊器</view>
+  <view>价格：<text class='price'>￥99</text></view>
+</view>
+
+<button bindtap="pay">立即支付</button>

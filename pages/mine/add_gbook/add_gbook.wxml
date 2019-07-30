@@ -1,0 +1,4 @@
+<form bindsubmit='form_submit'>
+  <textarea name="content" placeholder='请输入留言内容'></textarea>
+  <button form-type='submit'>确认留言</button>
+</form>

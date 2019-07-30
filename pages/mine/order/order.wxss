@@ -1,0 +1,87 @@
+page{
+  background: #f5f5f5;
+}
+
+.block{
+  margin-top:20rpx;
+  background: white;
+}
+
+.block .header{
+  display: flex;
+  padding:20rpx 0;
+  margin:0 30rpx;
+  font-size: 25rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.block .header .orderId{
+  flex:1;
+}
+
+.block .content{
+  display: flex;
+  padding:20rpx 30rpx;
+}
+
+.block  .content image{
+  width:100rpx;
+  height:100rpx;
+}
+
+.block .content .info{
+  padding: 0 20rpx;
+  flex:1;
+}
+
+.block .content .status{
+  color:red;
+}
+
+.block .bottom{
+  padding:20rpx 0;
+  margin:0 30rpx;
+  border-top:1px solid #f5f5f5;
+  display: flex;
+}
+
+.block .bottom .time{
+  flex:1;
+}
+
+.block .bottom .comment{
+  color:green;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.header swiper-item image{
+  width:100%;
+  height:100%;
+}
+
+.tab{
+  display: flex;
+  height:8vh;
+  background: white;
+}
+
+.tab view{
+  flex:1;
+  text-align: center;
+  padding:20rpx;
+  font-size: 35rpx;
+}
+
+.active{
+  color:#00CD00;
+  border-bottom: 5rpx solid #00CD00;
+}
+
+.main{
+  height:92vh;
+}
